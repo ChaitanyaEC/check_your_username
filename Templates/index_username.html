@@ -1,0 +1,23 @@
+{% extends "base_username.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+	<h2>Please provide the username that meets the following requirements: </h3>
+		<p>
+			<ul>
+				<li>It contains of a capital letter</li>
+				<li>It contains of a lower letter</li>
+				<li>It ends with a number</li>
+			</ul>
+		</p>
+	<form action="{{ url_for('report_username')}}">
+		<label for="Username">User name:</label>
+		<input type="text" name="username">
+		<input type="submit" name="Submit form">
+		
+	</form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base_username.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+
+	<p>Let's see the username!</p>
+
+	{% if report_username %}
+	<p>Your username meets the requirements that it contains,</p>
+	<ul>
+		<li>a lower letter,</li>
+		<li>a capital letter and,</li>
+		<li>ends with a number</li>
+	</ul> 
+	<h3>Your username is available!</h3>
+		
+	{% else %}
+	<ul>
+		{% if not lower %}
+		<p>Please use the lower letter.</p>
+		{% endif %}
+		{% if not upper %}
+		<p>Please use the upper letter.</p>
+		{% endif %}
+		{% if not num %}
+		<p>You do not end in number.</p>
+		{% endif %}
+	</ul>
+	{% endif %}
+
+
+</div>
+
+{% endblock %}
