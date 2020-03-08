@@ -9,4 +9,6 @@ pip install -U Flask
 To check whether it is installed or not,
 Enter, python
 >>> import flask
+
+
 if it doesn't shows any errors, you had installed flask successfully!
